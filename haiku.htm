@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>haiku</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1 {
+        font-size: 36pt;
+        color: #666;
+      }
+      .haiku {
+        font-size: 48pt;
+        background-color: #eee;
+        padding: .5em;
+        display: inline-block;
+      }
+      .line {
+        font-size: inherit;
+        display: block;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .share-bar {
+        padding-top: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>haiku</h1>
+    <div class="haiku">
+      <input class="line" len="40"/>
+      <input class="line" len="40"/>
+      <input class="line" len="40"/>
+    </div>
+    <div class="share-bar">
+      <a href="https://twitter.com/intent/tweet?button_hashtag=haiku&text=This%20is%20my%20haiku" class="twitter-hashtag-button" data-size="large" data-url="http://haiku.do/">Tweet #haiku</a>
+    </div>
+    <script src="http://platform.twitter.com/widgets.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".line").first().focus();
+      });
+    </script>
+  </body>
+</html>
